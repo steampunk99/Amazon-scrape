@@ -7,3 +7,9 @@ headers = {"User-Agent":'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWe
 
 page = requests.get(URL, headers=headers)
 
+soup = BeautifulSoup(page.content, 'html.parser')
+
+title  = soup.find(id='productTitle').get_text()
+price = soup.find(id="priceblock_ourprice").get_text()
+
+print(title.strip())
