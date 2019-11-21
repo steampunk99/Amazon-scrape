@@ -5,13 +5,23 @@ URL = "https://www.amazon.com/Razer-Blade-15-Smallest-i7-8750H/dp/B07D37VBVD/ref
 
 headers = {"User-Agent":'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'}
 
-page = requests.get(URL, headers=headers)
 
-soup = BeautifulSoup(page.content, 'html.parser')
+def check_price():
+    page = requests.get(URL, headers=headers)
 
-title  = soup.find(id='productTitle').get_text()
-price = soup.find(id="priceblock_ourprice").get_text()
+    soup = BeautifulSoup(page.content, 'html.parser')
 
-converted_price = float(price[0:5])
+    title  = soup.find(id='productTitle').get_text()
+    price = soup.find(id="priceblock_ourprice").get_text()
 
-print(title.strip())
+    converted_price = float(price[0:5])
+
+    if(converted_price <= 1000):
+        send_mail()
+
+
+    print(title.strip())
+    print(converted_price.strip())
+
+
+
