@@ -21,7 +21,7 @@ def check_price():
 
 
     print(title.strip())
-    print(converted_price.strip())
+    print(converted_price)
 
 
 
