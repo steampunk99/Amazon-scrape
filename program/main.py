@@ -30,7 +30,7 @@ def send_mail():
     server.starttls() #This is to encrpyt our connection
     server.ehlo()
 
-    server.login('luk23bonnie8@gmail.com', 'aaunvgbtxyblhnby')  #PS-The password was generated using google app passwords and only works once
+    server.login('luk23bonnie8@gmail.com', 'aaunvgbtxyblhnby')  #PS-The password was generated using google app passwords and only works once on my mac only
 
 
 
