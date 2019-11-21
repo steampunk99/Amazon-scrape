@@ -31,6 +31,7 @@ def send_mail():
     server.ehlo()
 
     server.login('luk23bonnie8@gmail.com', 'aaunvgbtxyblhnby')  #PS-The password was generated using google app passwords and only works once on my mac only
-
+    subject = "Yo, the price of the pc fell"
+    body = "Check the amazon link below"
 
 
