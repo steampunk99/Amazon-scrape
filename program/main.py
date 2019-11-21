@@ -26,6 +26,8 @@ def check_price():
 
 def send_mail():
     server = smtplib.SMTP('smtp.gmail.com', 587) #the number is gmail's connection number#
+    server.ehlo() #Is an extended simple mail transfer protocal sent by an email server to identify itself when connecting to another server
     
+
 
 
